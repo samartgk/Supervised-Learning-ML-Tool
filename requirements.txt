@@ -1,0 +1,10 @@
+streamlit
+random
+warnings
+plotly
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+Pillow
