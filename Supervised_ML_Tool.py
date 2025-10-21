@@ -273,7 +273,7 @@ def intro_page():
         This app was created by ALPHA. If you have any suggestions or requests please write to samartgk.10@gmail.com
         """
     )
-    image = Image.open(r"C:\Users\samar\Pictures\my_photo.jpg")
+    image = Image.open(r"my_photo.jpg")
     resized_image = image.resize((100, 100))
     st.image(resized_image, caption="Developer", use_container_width=False)
 
@@ -688,7 +688,7 @@ def Model_Process(db):
 
 if __name__ == "__main__":
     st.set_page_config(layout="wide")
-    Set_Background(r"C:\Users\samar\Pictures\new.png")
+    Set_Background(r"new.png")
     st.markdown(
         """
         <style>
@@ -711,4 +711,5 @@ if __name__ == "__main__":
         intro_page()
     elif page == "ML Tool":
         page_1()
+
 
