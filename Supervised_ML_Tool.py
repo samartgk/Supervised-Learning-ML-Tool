@@ -311,9 +311,11 @@ def Regression_Results(a, b):
         st.write("EMPTY DATASET")
         return
     performance = mean_absolute_percentage_error(a, b)
-    st.markdown(f"<h1 style='text-align: center; color: yellow; font-size: 2em;'>Model Accuracy = {round(100 - (performance*100),2)}%</h1>",
+    result = 100 - (performance * 100)
+    st.markdown(f"<h1 style='text-align: center; color: yellow; font-size: 2em;'>Model Accuracy = {round(result, 2)}%</h1>",
                 unsafe_allow_html=True)
     with st.expander("Expand to view Detailed Results"):
+        performance = mean_absolute_percentage_error(a, b)
         st.write("Mean absolute Percentage error : " + str(performance))
         error = mean_absolute_error(a, b)
         st.write("Mean absolute error : " + str(error))
@@ -711,6 +713,7 @@ if __name__ == "__main__":
         intro_page()
     elif page == "ML Tool":
         page_1()
+
 
 
 
